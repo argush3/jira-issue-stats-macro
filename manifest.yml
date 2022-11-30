@@ -1,0 +1,11 @@
+modules:
+  macro:
+    - key: jira-issue-stats-macro-hello-world
+      function: main
+      title: jira-issue-stats-macro
+      description: Inserts Hello world!
+  function:
+    - key: main
+      handler: index.run
+app:
+  id: ari:cloud:ecosystem::app/0a1b9361-2605-4255-b093-d7c3d004d4b0
