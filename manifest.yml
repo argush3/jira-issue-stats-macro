@@ -1,11 +1,21 @@
 modules:
   macro:
-    - key: jira-issue-stats-macro-hello-world
+    - key: jira-issue-stats-macro
       function: main
-      title: jira-issue-stats-macro
-      description: Inserts Hello world!
+      title: metrics
+      description: Inserts jira metrics
   function:
     - key: main
       handler: index.run
 app:
   id: ari:cloud:ecosystem::app/0a1b9361-2605-4255-b093-d7c3d004d4b0
+permissions:
+  scopes:
+    - read:confluence-space.summary
+    - read:confluence-content.summary
+    - read:jira-work
+    - write:jira-work
+    - read:jira-user
+    - manage:jira-project
+    - manage:jira-configuration
+    - search:confluence
